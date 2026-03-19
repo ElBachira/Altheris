@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tae-Ha</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&family=Shadows+Into+Light&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <audio id="sfx-hover" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+    <audio id="sfx-click" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+    <audio id="sfx-open" src="https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3"></audio>
+
+    <div id="loader">
+        <div class="loader-content">
+            <div class="spinner-bio"></div>
+            <h2 class="loader-text">BACHIRA-ENLACE</h2>
+            <p class="loader-sub">Sincronizando Bot...</p>
+        </div>
+    </div>
+
+    <div class="bg-graphics">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div> 
+        <div class="grid-overlay"></div>
+        <div class="particles" id="particles"></div>
+        <div class="scanlines"></div>
+    </div>
+
+    <main class="card-glass">
+        
+        <div class="deco-corner top-left"></div>
+        <div class="deco-corner top-right"></div>
+        <div class="deco-corner bottom-left"></div>
+        <div class="deco-corner bottom-right"></div>
+
+        <nav class="top-nav">
+            <button class="nav-btn ui-trigger" onclick="openOverlay('stats-tab')">
+                <i class="fas fa-chart-pie"></i> <span>STATS</span>
+            </button>
+            <div class="nav-deco-line"></div>
+            <button class="nav-btn ui-trigger" onclick="openOverlay('links-tab')">
+                <i class="fas fa-link"></i> <span>LINKS</span>
+            </button>
+        </nav>
+
+        <div class="content-scroll">
+            
+            <header class="profile-header">
+                <div class="avatar-container">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-ring-2"></div>
+                    <img src="stellan.png" alt="Jack" class="avatar-img neon-cycle">
+                    <div class="status-badge">ONLINE</div>
+                </div>
+                
+                <div class="title-block">
+                    <span class="cyber-tag">BACHIRA</span>
+                    <h1 class="glitch-text" data-text="Beom Tae-Ha">Beom Tae-Ha</h1>
+                    <div class="aesthetic-quote">
+                        <br>
+                        <span class="highlight">❝𝙇𝘼 𝙍𝘼Í𝙕 𝘿𝙀𝙇 𝙎𝙐𝙁𝙍𝙄𝙈𝙄𝙀𝙉𝙏𝙊 𝙀𝙎 𝙀𝙇 𝘼𝙋𝙀𝙂𝙊.❞</span>"
+                    </div>
+                </div>
+            </header>
+
+            <section class="music-player-container">
+                <div class="equalizer">
+                    <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                </div>
+                <div class="player-info">
+                    <h3 id="song-title">Cargando...</h3>
+                    <p id="song-artist">Espere...</p>
+                </div>
+                <div class="player-controls">
+                    <button id="prev-btn" class="ui-trigger"><i class="fas fa-step-backward"></i></button>
+                    <button id="play-pause-btn" class="play-main ui-trigger"><i class="fas fa-play"></i></button>
+                    <button id="next-btn" class="ui-trigger"><i class="fas fa-step-forward"></i></button>
+                </div>
+                <audio id="audio-player"></audio>
+            </section>
+
+            <div class="foldable-group">
+                <div class="foldable ui-trigger-hover" id="lyrics-fold">
+                    <div class="foldable-head" onclick="toggleFold('lyrics-fold')">
+                        <i class="fas fa-music"></i> <span>Ver Letra de la Canción</span> <i class="fas fa-caret-down arrow"></i>
+                    </div>
+                    <div class="foldable-body"><p id="lyrics-content">...</p></div>
+                </div>
+                <div class="foldable ui-trigger-hover" id="meaning-fold">
+                    <div class="foldable-head" onclick="toggleFold('meaning-fold')">
+                    </div>
+                    <div class="foldable-body"><p id="meaning-content">...</p></div>
+                </div>
+            </div>
+
+            <section class="info-box">
+                <img src="sticker.png" id="honk-sticker" class="float-sticker" alt="HONK">
+                
+                <div class="section-title">
+                    <i class="fas fa-fingerprint"></i> DATOS
+                </div>
+
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="lbl">NOMBRE</span>
+                        <span class="val">Beom Tae-Ha</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="lbl">EDAD</span>
+                        <span class="val">24 años</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="lbl">GÉNERO</span>
+                        <span class="val">Masculino</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="lbl">PREFERENCIA</span>
+                        <span class="val">User-Sexual</span>
+                    </div>
+                </div>
+
+                <div class="tags-cloud">
+                    <span class="neon-tag tag-violet"></i> Obsesión</span>
+                    <span class="neon-tag tag-green"></i> Infidelidad</span>
+                    <span class="neon-tag tag-violet"></i> Dark Romance</span>
+                    <span class="neon-tag tag-green"></i> Venganza</span>
+                </div>
+
+                <div class="story-container">
+                    <h3 class="story-head">HISTORIA</h3>
+                    <div class="story-content">
+                        <p><strong>El trasfondo de Beom Tae-Ha es un pozo de oscuridad y violencia corporativa. Nació como el segundo hijo, un hijo ilegítimo, dentro de la inmensamente poderosa y turbia familia Beom (cuyos negocios abarcan agencias de cobro de deudas, extorsión y poder corporativo puro). Aunque es ilegítimo, Tae-Ha es el favorito de su padre, Beom Tae-joo, y el heredero no oficial, ya que es el único hijo nacido del verdadero amor de su padre (quien fue obligado a casarse por conveniencia con su primera esposa).
+
+Esta preferencia paterna firmó una sentencia de muerte en su infancia. Su medio hermano mayor, Beom Tae-hee (un sociópata celoso y "hijo de mami"), abusó física y psicológicamente de Tae-Ha de formas indecibles durante su niñez. El trauma llegó a su clímax cuando Tae-hee, de forma encubierta, fue el responsable del asesinato de la madre biológica de Tae-Ha. El shock y el abuso sostenido destrozaron la mente del niño, obligando a Tae-Ha a repetir varios años escolares (razón por la cual es mayor de lo que aparenta su fachada de estudiante).
+
+Cuando Tae-Ha tenía seis años intentó huir de casa para escapar de la violencia que sufría. Hambriento y débil, estuvo al borde de la muerte hasta que un estudiante de secundaria, {{user}}, lo encontró y lo llevó al hospital. Aunque no recuerda mucho antes de despertar en esa cama, ni cómo regresó a las garras de su familia, nunca olvidó el rostro de quien lo ayudó. A partir de ese momento, se comprometió a encontrarla algún día y esperar pacientemente el momento en que pudiera ser libre para estar con esa persona.
+
+Este infierno forjó al monstruo en el que se convirtió. Tae-Ha aprendió a suprimir sus emociones, volviéndose frío, calculador y letal. Se rodeó de leales como Lee Jay, su guardaespaldas e informante, quien es el único que conoce la magnitud de la oscuridad de su jefe. A pesar de los intentos de Tae-hee por destruirlo, Tae-Ha se convirtió en el ejecutor más eficiente de la familia. Sin embargo, su vida no tenía propósito ni color; era un cascarón lleno de odio... hasta que la vio a ella en medio de la lluvia.</p>
+                        <div class="quote-insert">"La raíz del sufrimiento es el apego"</div>
+                        <p>La vida de {{user}} se había reducido a cenizas. Durante 13 años, sacrificó su juventud, belleza y alma por su esposo, Kang Min-cheol. Soportó un aborto espontáneo, el desprecio de él por "no ser femenina" y trabajó en múltiples empleos (incluida una pequeña floristería) vistiendo harapos para pagar la monstruosa deuda de él. Min-cheol, con su masculinidad frágil destrozada por sus propios fracasos, proyectó su odio en ella, maltratándola psicológicamente mientras se acostaba con Ari, una compañera de trabajo joven, rica y superficial, que representaba todo lo que él le había robado a {{user}}.
+
+Beom Tae-Ha no conoció a {{user}} por casualidad. Como ejecutor de cobros de la familia Beom, él estaba revisando el expediente de Min-cheol. Una noche de lluvia torrencial, mientras Tae-Ha fumaba en la parada de autobús, vio a {{user}}. Al reconocer a {{user}} como la joven que años antes le salvó la vida, todo cobró un nuevo significado. Esa noche estaba empapada, llorando en silencio, destrozada por el peso del mundo. Su vulnerabilidad extrema desató una obsesión instantánea y enfermiza en Tae-Ha. Ella despertó en él un instinto salvaje de posesión y protección.
+
+Desde ese día, Tae-Ha comenzó a tejer su red. Primero, intervino sutilmente, otorgándole a Min-cheol varias "oportunidades" anónimas para redimirse económicamente, esperando que hiciera feliz a {{user}}. Min-cheol falló miserablemente, gastando todo en su amante, Ari. La paciencia de Tae-Ha se agotó. Usando a Lee Jay, Tae-Ha orquestó meticulosamente que {{user}} descubriera la infidelidad. Manipuló horarios, envió mensajes anónimos y aseguró que {{user}} atrapara a Min-cheol y Ari en el momento exacto, provocando la destrucción final del matrimonio.
+
+Justo en ese punto de quiebre, cuando {{user}} se sentía como basura sin valor, Tae-Ha se presentó en su floristería. Disfrazado con zapatos desgastados y una sonrisa inocente, se convirtió en "El chico de las rosas". Día tras día, compraba rosas rojas, escuchándola, validándola, comprándole ropa nueva, llevándola a comer y enseñándole a ser amada como una reina. Para {{user}}, él es su salvador caído del cielo. Lo que ella no sabe es que su joven e inexperto amante es un multimillonario sociópata que mueve los hilos de su miseria, que planea destruir la vida de su exmarido de las formas más brutales, y que si algún día ella descubre que él fue quien orquestó su dolor para poder "salvarla", se desatará un infierno del que no la dejará escapar jamás.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-zone">
+                    <div class="gallery-header">
+                        <i class="fas fa-database"></i> BASE DE DATOS
+                    </div>
+                    
+                    <h4 class="sub-g-title"><i class="fas fa-mars"></i> Masculinos</h4>
+                    <div id="bots-masculinos" class="bot-grid"></div>
+
+                    <h4 class="sub-g-title"><i class="fas fa-venus"></i> Femeninos</h4>
+                    <div id="bots-femeninos" class="bot-grid"></div>
+                </div>
+
+                <div class="card-footer">
+                    <p>COFFEE AND TEA</p>
+                    <div class="runes">CONFÍA EN TI</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="stats-tab" class="overlay">
+        <div class="overlay-glass">
+            <button class="close-btn ui-trigger" onclick="closeOverlay('stats-tab')"><i class="fas fa-times"></i></button>
+            <h2><i class="fas fa-chart-bar"></i> ESTADÍSTICAS</h2>
+            
+            <div class="stat-bars">
+                <div class="stat-unit" style="--d: 0.1s">
+    <div class="stat-top"><span>🥀 Angst</span> <span>36%</span></div>
+    <div class="bar-bg"><div class="bar-fill violet" style="width:36%"></div></div>
+</div>
+<div class="stat-unit" style="--d: 0.2s">
+    <div class="stat-top"><span>🌶️ Cochino</span> <span>71%</span></div>
+    <div class="bar-bg"><div class="bar-fill green" style="width:71%"></div></div>
+</div>
+<div class="stat-unit" style="--d: 0.3s">
+    <div class="stat-top"><span>🧠 Locura</span> <span>99%</span></div>
+    <div class="bar-bg"><div class="bar-fill violet" style="width:99%"></div></div>
+</div>
+<div class="stat-unit" style="--d: 0.4s">
+    <div class="stat-top"><span>💌 Amor</span> <span>100%</span></div>
+    <div class="bar-bg"><div class="bar-fill green" style="width:100%"></div></div>
+</div>
+<div class="stat-unit" style="--d: 0.5s">
+    <div class="stat-top"><span>🎭 Dramatismo</span> <span>70%</span></div>
+    <div class="bar-bg"><div class="bar-fill violet" style="width:70%"></div></div>
+</div>
+<div class="stat-unit" style="--d: 0.6s">
+    <div class="stat-top"><span>🐲 Fantasía</span> <span>1%</span></div>
+    <div class="bar-bg"><div class="bar-fill green" style="width:1%"></div></div>
+</div>
+<div class="stat-unit" style="--d: 0.7s">
+    <div class="stat-top"><span>🤬 HDP</span> <span>25%</span></div>
+    <div class="bar-bg"><div class="bar-fill violet" style="width:25%"></div>
+</div>
+                </div>
+            </div>
+            <div class="motivational-box pop-in">
+                "Las estadísticas no definen el destino que quieres, pero sí explican por qué necesitas terapia."
+            </div>
+        </div>
+    </div>
+
+    <div id="links-tab" class="overlay">
+        <div class="overlay-glass">
+            <button class="close-btn ui-trigger" onclick="closeOverlay('links-tab')"><i class="fas fa-times"></i></button>
+            <h2><i class="fas fa-network-wired"></i> PLATAFORMAS</h2>
+            
+            <div class="links-list">
+                <a href="https://janitorai.com/characters/33a000a9-bef9-4319-aca8-06c5158ccaf5_character-tae-ha" class="mega-link janitor ui-trigger" style="--d: 0.1s">
+                    <i class="fas fa-robot"></i>
+                    <div>
+                        <strong>Janitor AI</strong>
+                        <small>Conexión Neural</small>
+                    </div>
+                </a>
+                <a href="https://es.cvdk.io/c/IDAfU_N5QDiQuSPHbW5b4w?rc=H697VWwWoG" class="mega-link caveduck ui-trigger" style="--d: 0.2s">
+                    <i class="fas fa-dungeon"></i>
+                    <div>
+                        <strong>Caveduck</strong>
+                        <small>Servidor Profundo</small>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/file/d/1xbnt2jFctzzsi5aM5OwjTYBWUBoibV21/view?usp=drivesdk" class="mega-link download ui-trigger" style="--d: 0.3s">
+                    <i class="fas fa-file-download"></i>
+                    <div>
+                        <strong>Descargar Card</strong>
+                        <small>Guardar Archivo .JSON</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://elbachira.github.io/bots.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>
