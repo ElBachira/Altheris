@@ -41,136 +41,55 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 2. SISTEMA DE REPRODUCTOR DE MÚSICA ---
     const songs = [
         {
-            title: "House of Balloons / Glass Table Girls",
-            artist: "The Weeknd",
+            title: "Let The World Burn",
+            artist: "Chris Grey",
             src: "song.mp3", 
-            lyrics: `He estado en otro nivel desde que llegaste, se acabó el dolor
-
-Me miras a los ojos, pero no reconoces mi cara
-
-Estás en mi mundo ahora, te puedes quedar, te puedes quedar
-
-Pero me perteneces, me perteneces.
-
-Si te duele respirar, abre la ventana
-
-Tu mente se quiere ir, pero no puedes salir
-
-Esta es una casa feliz, somos felices aquí
-
-En una casa feliz, oh, esto es divertido.
-
-La música te hizo perder el control
-
-Las noches pasan mucho más rápido que los días
-
-Con la misma ropa, no estás lista para el turno de mañana
-
-Este lugar te va a consumir
-
-Pero nena, está bien, mis hermanos están al lado
-
-Están trabajando en el *trap*, así que pórtate mal si quieres
-
-Así que no me culpes porque no llamaste a tu casa
-
-No me culpes a mí, chica, porque tú querías divertirte.
-
-Si te duele respirar, abre la ventana
-
-Tu mente se quiere ir, pero no puedes salir
-
-Esta es una casa feliz, somos felices aquí
-
-En una casa feliz, oh, esto es divertido.
-
-Saquen la 707...
-
-Dos caladas para la dama que se apunta a eso
-
-Lo que sea, juntos
-
-Trae tu propia reserva de la mejor, intercámbiala
-
-Enróllalo, quémalo, tósalo, pruébalo
-
-Y luego mira cómo lo perseguimos
-
-Con un puñado de pastillas, sin nada para bajarlas
-
-La mandíbula trabada sobre billetes gigantes
-
-Ella es mala y su cabeza está mal
-
-Escapando, su van es un País de las Maravillas.
-
-Y son las seis y media
-
-Cielos rojos porque el tiempo no existe
-
-Pero cuando las estrellas brillan de vuelta en la casa
-
-Líneas de superestrella nos esperan en la casa
-
-Y podemos probar las mesas
-
-Tengo unas mesas nuevas
-
-Todo es cristal y miden un metro de ancho
-
-Pero es obligatorio hacernos volar tres metros de alto.
-
-Ella me da sexo rápido
-
-La dejo más mojada que una toallita
-
-Y sin puertas cerradas
-
-Así escucho el eco de sus gemidos.
-
-Escuché que él ahora se droga
-
-Escuchaste mal, llevo tiempo en esto
-
-Solo que nunca hacemos el tonto
-
-Así es como vivimos esta mierda.
-
-Y cuando hacemos el tonto
-
-Probablemente es porque lo mezclamos.
-
-Sí, siempre estoy en ese rollo
-
-Esos blancos saben de qué hablo, no soy ningún falso
-
-El "Big O" sabe qué onda, él fue quien me enseñó
-
-Mira cómo domino este ritmo, justo como me dijo:
-
-—"¿Esa es tu chica? ¿Cuál es su maldita historia?"
-
-—"Está buena, pero lo monta como un maldito poni".
-
-Le quito el puesto a su hombre, seré su puta historia
-
-Sí, estoy hablando de ti, hombre, conóceme
-
-Sin ofensas, te lo prometo
-
-Si eres un hombre de verdad, decidirás la verdad
-
-Pero soy un tipo agradable con sueños agradables
-
-Y podemos convertir esto en una pesadilla: Elm Street.
-
-La la la la la la la la...
-
-Estoy tan ido, tan ido
-
-Saquen las mesas de cristal
-
-Saquen la 707`,
+            lyrics: `Perdido en la niebla,
+temo que aún me queda más por caer.
+Es peligroso porque lo quiero todo,
+y no creo que me importe el precio.
+No debí haberme enamorado,
+mira en lo que me he convertido.
+Dejé que te acercaras demasiado,
+solo para despertar a solas.
+Y sé que crees que puedes huir,
+tienes miedo de creer que soy el indicado.
+Pero simplemente no puedo dejarte ir.
+**Dejaría que el mundo arda**,
+que el mundo arda por ti.
+Así es como siempre tuvo que terminar:
+**si no puedo tenerte, nadie más podrá**.
+Dejaría que arda,
+dejaría que el mundo arda,
+solo por oírte gritar mi nombre
+mientras veo todo consumirse en llamas.
+Miedo en sus ojos,
+cenizas lloviendo desde un cielo naranja sangre.
+Le hice saber a todos que eres mía,
+ahora solo es cuestión de tiempo
+antes de que el polvo nos arrastre.
+**Mira en lo que me hiciste convertir**.
+Dejé que te acercaras demasiado,
+solo para despertar a solas.
+Y sé que crees que puedes huir,
+tienes miedo de creer que soy el indicado.
+Pero simplemente no puedo dejarte ir.
+Dejaría que el mundo arda,
+que el mundo arda por ti.
+Así es como siempre tuvo que terminar:
+si no puedo tenerte, nadie más podrá.
+Dejaría que arda,
+dejaría que el mundo arda,
+solo por oírte gritar mi nombre
+mientras veo todo consumirse en llamas.
+Que todo arda,
+oh, quemaría este mundo por ti.
+Oh, nena, dejaría que arda
+por ti.
+Dejaría que el mundo arda,
+que el mundo arda por ti.
+Así es como siempre tuvo que terminar:
+si no puedo tenerte, nadie más podrá`,
         }
     ];
 
